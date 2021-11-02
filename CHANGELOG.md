@@ -1,3 +1,9 @@
+# [v1.0.0-beta.5](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-11-02)
+
+## ✨ New Features
+
+- [`1f87dff`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/1f87dff) Add types of zaif tokens
+
 # [v1.0.0-beta.4](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2021-11-02)
 
 ## ✨ New Features
