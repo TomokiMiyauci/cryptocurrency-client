@@ -6,6 +6,9 @@
   "scripts": {
     "commit": "cz",
     "prepare": "husky install",
+    "lint:eslint": "eslint --ignore-path .gitignore .",
+    "lint:tsc": "tsc --noEmit",
+    "lint": "run-p lint:*",
     "build:types": "tsc --emitDeclarationOnly && tsc-alias",
     "build": "run-p build:*",
     "release": "semantic-release"
