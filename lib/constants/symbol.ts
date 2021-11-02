@@ -15,6 +15,8 @@ export const qtum = 'qtum'
 export const bat = 'bat'
 export const iost = 'iost'
 export const plt = 'plt'
+export const enj = 'enj'
+export const omg = 'omg'
 
 export const ALL = [
   btc,
@@ -32,5 +34,7 @@ export const ALL = [
   bat,
   iost,
   plt,
-  jpy
+  jpy,
+  enj,
+  omg
 ] as const
