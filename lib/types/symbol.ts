@@ -14,8 +14,11 @@ import {
   xlm,
   qtum,
   bat,
-  iost
+  iost,
+  ALL
 } from '@/constants/symbol'
+
+type allSymbols = typeof ALL[number]
 
 type btc = typeof btc
 type jpy = typeof jpy
@@ -34,6 +37,8 @@ type qtum = typeof qtum
 type bat = typeof bat
 type iost = typeof iost
 
+type keyCurrency = jpy | btc
+
 type BTC = Uppercase<btc>
 type JPY = Uppercase<jpy>
 type PLT = Uppercase<plt>
@@ -50,6 +55,7 @@ type XLM = Uppercase<xlm>
 type QTUM = Uppercase<qtum>
 type BAT = Uppercase<bat>
 type IOST = Uppercase<iost>
+type AllSymbols = Uppercase<allSymbols>
 
 export type {
   btc,
@@ -83,5 +89,8 @@ export type {
   XLM,
   QTUM,
   BAT,
-  IOST
+  IOST,
+  allSymbols,
+  AllSymbols,
+  keyCurrency
 }
