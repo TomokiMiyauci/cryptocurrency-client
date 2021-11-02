@@ -13,13 +13,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
 
     steps:
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ matrix.node }}
-
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -46,6 +41,10 @@ jobs:
         node: [16]
 
     steps:
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.0.2
+
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
@@ -74,7 +73,11 @@ jobs:
         node: [16]
 
     steps:
-      - uses: actions/setup-node@v2-beta
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.0.2
+
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 
@@ -105,8 +108,13 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node: [16]
+
     steps:
-      - uses: actions/setup-node@v2-beta
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.0.2
+
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 
