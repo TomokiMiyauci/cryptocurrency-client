@@ -81,7 +81,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-       - name: Restore node_modules
+      - name: Restore node_modules
         uses: actions/cache@v2
         with:
           path: ~/.pnpm-store
@@ -113,7 +113,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-       - name: Restore node_modules
+      - name: Restore node_modules
         uses: actions/cache@v2
         with:
           path: ~/.pnpm-store
