@@ -1,3 +1,9 @@
+# [v1.0.0-beta.4](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2021-11-02)
+
+## ✨ New Features
+
+- [`8d99a2e`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/8d99a2e) Add new symbol treating coincheck
+
 # [v1.0.0-beta.3](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2021-11-02)
 
 ## ✨ New Features
