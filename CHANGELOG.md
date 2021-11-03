@@ -1,3 +1,9 @@
+# [v1.0.0-beta.6](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-11-03)
+
+## ✨ New Features
+
+- [`3905217`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/3905217) Add new symbol
+
 # [v1.0.0-beta.5](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-11-02)
 
 ## ✨ New Features
