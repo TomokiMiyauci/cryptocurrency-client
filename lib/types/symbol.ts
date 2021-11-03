@@ -17,6 +17,7 @@ import {
   iost,
   enj,
   omg,
+  bcc,
   pepecash,
   hinanomai,
   shimarena,
@@ -175,6 +176,7 @@ type bat = typeof bat
 type iost = typeof iost
 type enj = typeof enj
 type omg = typeof omg
+type bcc = typeof bcc
 type pepecash = typeof pepecash
 type hinanomai = typeof hinanomai
 type shimarena = typeof shimarena
@@ -330,6 +332,7 @@ type BAT = Uppercase<bat>
 type IOST = Uppercase<iost>
 type ENJ = Uppercase<enj>
 type OMG = Uppercase<omg>
+type BCC = Uppercase<bcc>
 type PEPECASH = Uppercase<pepecash>
 type HINANOMAI = Uppercase<hinanomai>
 type SHIMARENA = Uppercase<shimarena>
@@ -486,6 +489,8 @@ export type {
   iost,
   enj,
   omg,
+  bcc,
+  BCC,
   pepecash,
   hinanomai,
   shimarena,

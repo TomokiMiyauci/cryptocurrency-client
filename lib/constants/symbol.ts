@@ -17,6 +17,7 @@ export const iost = 'iost'
 export const plt = 'plt'
 export const enj = 'enj'
 export const omg = 'omg'
+export const bcc = 'bcc'
 export const pepecash = 'pepecash'
 export const hinanomai = 'hinanomai'
 export const shimarena = 'shimarena'
@@ -171,6 +172,7 @@ export const ALL = [
   jpy,
   enj,
   omg,
+  bcc,
   pepecash,
   hinanomai,
   shimarena,
