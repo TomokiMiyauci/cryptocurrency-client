@@ -1,7 +1,7 @@
 {
   "name": "cryptocurrency-types",
   "description": "Crypto currency utility types and constants",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.8",
   "types": "dist/index.d.ts",
   "scripts": {
     "commit": "cz",

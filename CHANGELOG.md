@@ -1,3 +1,9 @@
+# [v1.0.0-beta.8](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2021-11-04)
+
+## ✨ New Features
+
+- [`fff6ba1`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/fff6ba1) Add new symbols and export array of all symbols
+
 # [v1.0.0-beta.7](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-11-04)
 
 ## ✨ New Features
