@@ -1,4 +1,4 @@
-import type { allSymbols, keyCurrency, jpy } from '@/types/symbol'
+import type { allSymbols, baseCurrency, jpy } from '@/types/symbol'
 
 type Join<
   T extends string,
@@ -13,7 +13,10 @@ type DropChar<
   ? DropChar<`${prefix}${suffix}`, U>
   : T
 
-type all_pairs = Exclude<Join<Exclude<allSymbols, jpy>, keyCurrency>, 'btc_btc'>
+type all_pairs = Exclude<
+  Join<Exclude<allSymbols, jpy>, baseCurrency>,
+  'btc_btc'
+>
 type All_Pairs = Uppercase<all_pairs>
 type allpairs = DropChar<all_pairs, '_'>
 type AllPairs = DropChar<All_Pairs, '_'>

@@ -1,3 +1,4 @@
+import { ALL_SYMBOLS } from '@/constants'
 import {
   btc,
   jpy,
@@ -19,6 +20,8 @@ import {
   omg,
   bcc,
   ont,
+  trx,
+  ht,
   pepecash,
   hinanomai,
   shimarena,
@@ -152,635 +155,324 @@ import {
   yogibogocptw,
   magatamagnon,
   erc20_cms,
-  mosaic_cms,
-  ALL
+  mosaic_cms
 } from '@/constants/symbol'
 
-type allSymbols = typeof ALL[number]
-type AllSymbols = Uppercase<allSymbols>
+export type baseCurrency = jpy | btc
 
-type btc = typeof btc
-type jpy = typeof jpy
-type plt = typeof plt
-type etc = typeof etc
-type fct = typeof fct
-type mona = typeof mona
-type eth = typeof eth
-type lsk = typeof lsk
-type xrp = typeof xrp
-type xem = typeof xem
-type ltc = typeof ltc
-type bch = typeof bch
-type xlm = typeof xlm
-type qtum = typeof qtum
-type bat = typeof bat
-type iost = typeof iost
-type enj = typeof enj
-type omg = typeof omg
-type bcc = typeof bcc
-type ont = typeof ont
-type pepecash = typeof pepecash
-type hinanomai = typeof hinanomai
-type shimarena = typeof shimarena
-type magatamardon = typeof magatamardon
-type rumirumi = typeof rumirumi
-type shirahoshibg = typeof shirahoshibg
-type magatamablfv = typeof magatamablfv
-type magatamardfr = typeof magatamardfr
-type magatamagn = typeof magatamagn
-type mizuki = typeof mizuki
-type leenabg = typeof leenabg
-type risavix = typeof risavix
-type shirahoshi = typeof shirahoshi
-type magatamablsx = typeof magatamablsx
-type magatamagnth = typeof magatamagnth
-type yogibogocpfr = typeof yogibogocpfr
-type ncxc = typeof ncxc
-type magatamardfv = typeof magatamardfv
-type magatamatq = typeof magatamatq
-type sanomayavix = typeof sanomayavix
-type ruru = typeof ruru
-type magatamagnfv = typeof magatamagnfv
-type hyou = typeof hyou
-type bitcrystals = typeof bitcrystals
-type magatamawtfv = typeof magatamawtfv
-type nemcard = typeof nemcard
-type magatamawtsx = typeof magatamawtsx
-type magatamagnsv = typeof magatamagnsv
-type yogibogocpfv = typeof yogibogocpfv
-type zaif = typeof zaif
-type magatamaylon = typeof magatamaylon
-type magatamablsv = typeof magatamablsv
-type magatamavtsv = typeof magatamavtsv
-type itsuki = typeof itsuki
-type djasanyanvix = typeof djasanyanvix
-type tsukasa = typeof tsukasa
-type chikarinbg = typeof chikarinbg
-type kaoribg = typeof kaoribg
-type magatamawtfr = typeof magatamawtfr
-type bitgirlsi = typeof bitgirlsi
-type magatamayl = typeof magatamayl
-type cicc = typeof cicc
-type sirahosivix = typeof sirahosivix
-type xacone = typeof xacone
-type magatamawt = typeof magatamawt
-type rumirumibg = typeof rumirumibg
-type xacsix = typeof xacsix
-type magatamavton = typeof magatamavton
-type magatamagnsx = typeof magatamagnsx
-type magatamavttw = typeof magatamavttw
-type shimarenabg = typeof shimarenabg
-type kinokousaka = typeof kinokousaka
-type chikarinvix = typeof chikarinvix
-type magatamavtth = typeof magatamavtth
-type sjcx = typeof sjcx
-type xactwo = typeof xactwo
-type magatamabl = typeof magatamabl
-type bitgirlsii = typeof bitgirlsii
-type magatamatqsv = typeof magatamatqsv
-type kinobg = typeof kinobg
-type mizukivix = typeof mizukivix
-type magatamabltw = typeof magatamabltw
-type djasanyan = typeof djasanyan
-type yogibogocpth = typeof yogibogocpth
-type magatamayltw = typeof magatamayltw
-type magatamard = typeof magatamard
-type xacnine = typeof xacnine
-type leena = typeof leena
-type magatamaylfr = typeof magatamaylfr
-type magatamablon = typeof magatamablon
-type mamichanbg = typeof mamichanbg
-type rurubg = typeof rurubg
-type magatamardsx = typeof magatamardsx
-type magatamavtsx = typeof magatamavtsx
-type sanomayabg = typeof sanomayabg
-type itsukibg = typeof itsukibg
-type tsukasavix = typeof tsukasavix
-type magatamaylsx = typeof magatamaylsx
-type mizukibg = typeof mizukibg
-type yogibogocpon = typeof yogibogocpon
-type magatamagntw = typeof magatamagntw
-type mamichannel = typeof mamichannel
-type pachi = typeof pachi
-type xcp = typeof xcp
-type xacfour = typeof xacfour
-type djasanyanbg = typeof djasanyanbg
-type hinanomaibg = typeof hinanomaibg
-type torekabuopt = typeof torekabuopt
-type magatamardtw = typeof magatamardtw
-type magatamaylsv = typeof magatamaylsv
-type yogibogocpsx = typeof yogibogocpsx
-type magatamaylfv = typeof magatamaylfv
-type magatamawttw = typeof magatamawttw
-type magatamatqfv = typeof magatamatqfv
-type magatamawtsv = typeof magatamawtsv
-type fscc = typeof fscc
-type xacfive = typeof xacfive
-type yamaguchia = typeof yamaguchia
-type magatamatqsx = typeof magatamatqsx
-type magatamatqtw = typeof magatamatqtw
-type xym = typeof xym
-type tsukasabg = typeof tsukasabg
-type magatamardth = typeof magatamardth
-type magatamavtfv = typeof magatamavtfv
-type jpyz = typeof jpyz
-type magatamatqon = typeof magatamatqon
-type magatamawton = typeof magatamawton
-type magatamaylth = typeof magatamaylth
-type magatamavt = typeof magatamavt
-type xacthree = typeof xacthree
-type magatamamijn = typeof magatamamijn
-type magatamawtth = typeof magatamawtth
-type sanomaya = typeof sanomaya
-type kaori = typeof kaori
-type magatamablfr = typeof magatamablfr
-type magatamablth = typeof magatamablth
-type magatamatqfr = typeof magatamatqfr
-type xaceight = typeof xaceight
-type icharlotte = typeof icharlotte
-type chikarin = typeof chikarin
-type yamaguchiabg = typeof yamaguchiabg
-type satoayaka = typeof satoayaka
-type satoayakabg = typeof satoayakabg
-type magatamagnfr = typeof magatamagnfr
-type magatamavtfr = typeof magatamavtfr
-type magatamatqth = typeof magatamatqth
-type magatamabz = typeof magatamabz
-type magatamardsv = typeof magatamardsv
-type icharlottebg = typeof icharlottebg
-type xacseven = typeof xacseven
-type yogibogocptw = typeof yogibogocptw
-type magatamagnon = typeof magatamagnon
-type erc20_cms = typeof erc20_cms
-type mosaic_cms = typeof mosaic_cms
+export type allSymbols = typeof ALL_SYMBOLS[number]
+export type AllSymbols = Uppercase<allSymbols>
 
-type keyCurrency = jpy | btc
+export type btc = typeof btc
+export type jpy = typeof jpy
+export type plt = typeof plt
+export type etc = typeof etc
+export type fct = typeof fct
+export type mona = typeof mona
+export type eth = typeof eth
+export type lsk = typeof lsk
+export type xrp = typeof xrp
+export type xem = typeof xem
+export type ltc = typeof ltc
+export type bch = typeof bch
+export type xlm = typeof xlm
+export type qtum = typeof qtum
+export type bat = typeof bat
+export type iost = typeof iost
+export type enj = typeof enj
+export type omg = typeof omg
+export type bcc = typeof bcc
+export type ont = typeof ont
+export type trx = typeof trx
+export type ht = typeof ht
+export type pepecash = typeof pepecash
+export type hinanomai = typeof hinanomai
+export type shimarena = typeof shimarena
+export type magatamardon = typeof magatamardon
+export type rumirumi = typeof rumirumi
+export type shirahoshibg = typeof shirahoshibg
+export type magatamablfv = typeof magatamablfv
+export type magatamardfr = typeof magatamardfr
+export type magatamagn = typeof magatamagn
+export type mizuki = typeof mizuki
+export type leenabg = typeof leenabg
+export type risavix = typeof risavix
+export type shirahoshi = typeof shirahoshi
+export type magatamablsx = typeof magatamablsx
+export type magatamagnth = typeof magatamagnth
+export type yogibogocpfr = typeof yogibogocpfr
+export type ncxc = typeof ncxc
+export type magatamardfv = typeof magatamardfv
+export type magatamatq = typeof magatamatq
+export type sanomayavix = typeof sanomayavix
+export type ruru = typeof ruru
+export type magatamagnfv = typeof magatamagnfv
+export type hyou = typeof hyou
+export type bitcrystals = typeof bitcrystals
+export type magatamawtfv = typeof magatamawtfv
+export type nemcard = typeof nemcard
+export type magatamawtsx = typeof magatamawtsx
+export type magatamagnsv = typeof magatamagnsv
+export type yogibogocpfv = typeof yogibogocpfv
+export type zaif = typeof zaif
+export type magatamaylon = typeof magatamaylon
+export type magatamablsv = typeof magatamablsv
+export type magatamavtsv = typeof magatamavtsv
+export type itsuki = typeof itsuki
+export type djasanyanvix = typeof djasanyanvix
+export type tsukasa = typeof tsukasa
+export type chikarinbg = typeof chikarinbg
+export type kaoribg = typeof kaoribg
+export type magatamawtfr = typeof magatamawtfr
+export type bitgirlsi = typeof bitgirlsi
+export type magatamayl = typeof magatamayl
+export type cicc = typeof cicc
+export type sirahosivix = typeof sirahosivix
+export type xacone = typeof xacone
+export type magatamawt = typeof magatamawt
+export type rumirumibg = typeof rumirumibg
+export type xacsix = typeof xacsix
+export type magatamavton = typeof magatamavton
+export type magatamagnsx = typeof magatamagnsx
+export type magatamavttw = typeof magatamavttw
+export type shimarenabg = typeof shimarenabg
+export type kinokousaka = typeof kinokousaka
+export type chikarinvix = typeof chikarinvix
+export type magatamavtth = typeof magatamavtth
+export type sjcx = typeof sjcx
+export type xactwo = typeof xactwo
+export type magatamabl = typeof magatamabl
+export type bitgirlsii = typeof bitgirlsii
+export type magatamatqsv = typeof magatamatqsv
+export type kinobg = typeof kinobg
+export type mizukivix = typeof mizukivix
+export type magatamabltw = typeof magatamabltw
+export type djasanyan = typeof djasanyan
+export type yogibogocpth = typeof yogibogocpth
+export type magatamayltw = typeof magatamayltw
+export type magatamard = typeof magatamard
+export type xacnine = typeof xacnine
+export type leena = typeof leena
+export type magatamaylfr = typeof magatamaylfr
+export type magatamablon = typeof magatamablon
+export type mamichanbg = typeof mamichanbg
+export type rurubg = typeof rurubg
+export type magatamardsx = typeof magatamardsx
+export type magatamavtsx = typeof magatamavtsx
+export type sanomayabg = typeof sanomayabg
+export type itsukibg = typeof itsukibg
+export type tsukasavix = typeof tsukasavix
+export type magatamaylsx = typeof magatamaylsx
+export type mizukibg = typeof mizukibg
+export type yogibogocpon = typeof yogibogocpon
+export type magatamagntw = typeof magatamagntw
+export type mamichannel = typeof mamichannel
+export type pachi = typeof pachi
+export type xcp = typeof xcp
+export type xacfour = typeof xacfour
+export type djasanyanbg = typeof djasanyanbg
+export type hinanomaibg = typeof hinanomaibg
+export type torekabuopt = typeof torekabuopt
+export type magatamardtw = typeof magatamardtw
+export type magatamaylsv = typeof magatamaylsv
+export type yogibogocpsx = typeof yogibogocpsx
+export type magatamaylfv = typeof magatamaylfv
+export type magatamawttw = typeof magatamawttw
+export type magatamatqfv = typeof magatamatqfv
+export type magatamawtsv = typeof magatamawtsv
+export type fscc = typeof fscc
+export type xacfive = typeof xacfive
+export type yamaguchia = typeof yamaguchia
+export type magatamatqsx = typeof magatamatqsx
+export type magatamatqtw = typeof magatamatqtw
+export type xym = typeof xym
+export type tsukasabg = typeof tsukasabg
+export type magatamardth = typeof magatamardth
+export type magatamavtfv = typeof magatamavtfv
+export type jpyz = typeof jpyz
+export type magatamatqon = typeof magatamatqon
+export type magatamawton = typeof magatamawton
+export type magatamaylth = typeof magatamaylth
+export type magatamavt = typeof magatamavt
+export type xacthree = typeof xacthree
+export type magatamamijn = typeof magatamamijn
+export type magatamawtth = typeof magatamawtth
+export type sanomaya = typeof sanomaya
+export type kaori = typeof kaori
+export type magatamablfr = typeof magatamablfr
+export type magatamablth = typeof magatamablth
+export type magatamatqfr = typeof magatamatqfr
+export type xaceight = typeof xaceight
+export type icharlotte = typeof icharlotte
+export type chikarin = typeof chikarin
+export type yamaguchiabg = typeof yamaguchiabg
+export type satoayaka = typeof satoayaka
+export type satoayakabg = typeof satoayakabg
+export type magatamagnfr = typeof magatamagnfr
+export type magatamavtfr = typeof magatamavtfr
+export type magatamatqth = typeof magatamatqth
+export type magatamabz = typeof magatamabz
+export type magatamardsv = typeof magatamardsv
+export type icharlottebg = typeof icharlottebg
+export type xacseven = typeof xacseven
+export type yogibogocptw = typeof yogibogocptw
+export type magatamagnon = typeof magatamagnon
+export type erc20_cms = typeof erc20_cms
+export type mosaic_cms = typeof mosaic_cms
 
-type BTC = Uppercase<btc>
-type JPY = Uppercase<jpy>
-type PLT = Uppercase<plt>
-type ETC = Uppercase<etc>
-type FCT = Uppercase<fct>
-type MONA = Uppercase<mona>
-type ETH = Uppercase<eth>
-type LSK = Uppercase<lsk>
-type XRP = Uppercase<xrp>
-type XEM = Uppercase<xem>
-type LTC = Uppercase<ltc>
-type BCH = Uppercase<bch>
-type XLM = Uppercase<xlm>
-type QTUM = Uppercase<qtum>
-type BAT = Uppercase<bat>
-type IOST = Uppercase<iost>
-type ENJ = Uppercase<enj>
-type OMG = Uppercase<omg>
-type BCC = Uppercase<bcc>
-type ONT = Uppercase<ont>
-type PEPECASH = Uppercase<pepecash>
-type HINANOMAI = Uppercase<hinanomai>
-type SHIMARENA = Uppercase<shimarena>
-type MAGATAMARDON = Uppercase<magatamardon>
-type RUMIRUMI = Uppercase<rumirumi>
-type SHIRAHOSHIBG = Uppercase<shirahoshibg>
-type MAGATAMABLFV = Uppercase<magatamablfv>
-type MAGATAMARDFR = Uppercase<magatamardfr>
-type MAGATAMAGN = Uppercase<magatamagn>
-type MIZUKI = Uppercase<mizuki>
-type LEENABG = Uppercase<leenabg>
-type RISAVIX = Uppercase<risavix>
-type SHIRAHOSHI = Uppercase<shirahoshi>
-type MAGATAMABLSX = Uppercase<magatamablsx>
-type MAGATAMAGNTH = Uppercase<magatamagnth>
-type YOGIBOGOCPFR = Uppercase<yogibogocpfr>
-type NCXC = Uppercase<ncxc>
-type MAGATAMARDFV = Uppercase<magatamardfv>
-type MAGATAMATQ = Uppercase<magatamatq>
-type SANOMAYAVIX = Uppercase<sanomayavix>
-type RURU = Uppercase<ruru>
-type MAGATAMAGNFV = Uppercase<magatamagnfv>
-type HYOU = Uppercase<hyou>
-type BITCRYSTALS = Uppercase<bitcrystals>
-type MAGATAMAWTFV = Uppercase<magatamawtfv>
-type NEMCARD = Uppercase<nemcard>
-type MAGATAMAWTSX = Uppercase<magatamawtsx>
-type MAGATAMAGNSV = Uppercase<magatamagnsv>
-type YOGIBOGOCPFV = Uppercase<yogibogocpfv>
-type ZAIF = Uppercase<zaif>
-type MAGATAMAYLON = Uppercase<magatamaylon>
-type MAGATAMABLSV = Uppercase<magatamablsv>
-type MAGATAMAVTSV = Uppercase<magatamavtsv>
-type ITSUKI = Uppercase<itsuki>
-type DJASANYANVIX = Uppercase<djasanyanvix>
-type TSUKASA = Uppercase<tsukasa>
-type CHIKARINBG = Uppercase<chikarinbg>
-type KAORIBG = Uppercase<kaoribg>
-type MAGATAMAWTFR = Uppercase<magatamawtfr>
-type BITGIRLSI = Uppercase<bitgirlsi>
-type MAGATAMAYL = Uppercase<magatamayl>
-type CICC = Uppercase<cicc>
-type SIRAHOSIVIX = Uppercase<sirahosivix>
-type XACONE = Uppercase<xacone>
-type MAGATAMAWT = Uppercase<magatamawt>
-type RUMIRUMIBG = Uppercase<rumirumibg>
-type XACSIX = Uppercase<xacsix>
-type MAGATAMAVTON = Uppercase<magatamavton>
-type MAGATAMAGNSX = Uppercase<magatamagnsx>
-type MAGATAMAVTTW = Uppercase<magatamavttw>
-type SHIMARENABG = Uppercase<shimarenabg>
-type KINOKOUSAKA = Uppercase<kinokousaka>
-type CHIKARINVIX = Uppercase<chikarinvix>
-type MAGATAMAVTTH = Uppercase<magatamavtth>
-type SJCX = Uppercase<sjcx>
-type XACTWO = Uppercase<xactwo>
-type MAGATAMABL = Uppercase<magatamabl>
-type BITGIRLSII = Uppercase<bitgirlsii>
-type MAGATAMATQSV = Uppercase<magatamatqsv>
-type KINOBG = Uppercase<kinobg>
-type MIZUKIVIX = Uppercase<mizukivix>
-type MAGATAMABLTW = Uppercase<magatamabltw>
-type DJASANYAN = Uppercase<djasanyan>
-type YOGIBOGOCPTH = Uppercase<yogibogocpth>
-type MAGATAMAYLTW = Uppercase<magatamayltw>
-type MAGATAMARD = Uppercase<magatamard>
-type XACNINE = Uppercase<xacnine>
-type LEENA = Uppercase<leena>
-type MAGATAMAYLFR = Uppercase<magatamaylfr>
-type MAGATAMABLON = Uppercase<magatamablon>
-type MAMICHANBG = Uppercase<mamichanbg>
-type RURUBG = Uppercase<rurubg>
-type MAGATAMARDSX = Uppercase<magatamardsx>
-type MAGATAMAVTSX = Uppercase<magatamavtsx>
-type SANOMAYABG = Uppercase<sanomayabg>
-type ITSUKIBG = Uppercase<itsukibg>
-type TSUKASAVIX = Uppercase<tsukasavix>
-type MAGATAMAYLSX = Uppercase<magatamaylsx>
-type MIZUKIBG = Uppercase<mizukibg>
-type YOGIBOGOCPON = Uppercase<yogibogocpon>
-type MAGATAMAGNTW = Uppercase<magatamagntw>
-type MAMICHANNEL = Uppercase<mamichannel>
-type PACHI = Uppercase<pachi>
-type XCP = Uppercase<xcp>
-type XACFOUR = Uppercase<xacfour>
-type DJASANYANBG = Uppercase<djasanyanbg>
-type HINANOMAIBG = Uppercase<hinanomaibg>
-type TOREKABUOPT = Uppercase<torekabuopt>
-type MAGATAMARDTW = Uppercase<magatamardtw>
-type MAGATAMAYLSV = Uppercase<magatamaylsv>
-type YOGIBOGOCPSX = Uppercase<yogibogocpsx>
-type MAGATAMAYLFV = Uppercase<magatamaylfv>
-type MAGATAMAWTTW = Uppercase<magatamawttw>
-type MAGATAMATQFV = Uppercase<magatamatqfv>
-type MAGATAMAWTSV = Uppercase<magatamawtsv>
-type FSCC = Uppercase<fscc>
-type XACFIVE = Uppercase<xacfive>
-type YAMAGUCHIA = Uppercase<yamaguchia>
-type MAGATAMATQSX = Uppercase<magatamatqsx>
-type MAGATAMATQTW = Uppercase<magatamatqtw>
-type XYM = Uppercase<xym>
-type TSUKASABG = Uppercase<tsukasabg>
-type MAGATAMARDTH = Uppercase<magatamardth>
-type MAGATAMAVTFV = Uppercase<magatamavtfv>
-type JPYZ = Uppercase<jpyz>
-type MAGATAMATQON = Uppercase<magatamatqon>
-type MAGATAMAWTON = Uppercase<magatamawton>
-type MAGATAMAYLTH = Uppercase<magatamaylth>
-type MAGATAMAVT = Uppercase<magatamavt>
-type XACTHREE = Uppercase<xacthree>
-type MAGATAMAMIJN = Uppercase<magatamamijn>
-type MAGATAMAWTTH = Uppercase<magatamawtth>
-type SANOMAYA = Uppercase<sanomaya>
-type KAORI = Uppercase<kaori>
-type MAGATAMABLFR = Uppercase<magatamablfr>
-type MAGATAMABLTH = Uppercase<magatamablth>
-type MAGATAMATQFR = Uppercase<magatamatqfr>
-type XACEIGHT = Uppercase<xaceight>
-type ICHARLOTTE = Uppercase<icharlotte>
-type CHIKARIN = Uppercase<chikarin>
-type YAMAGUCHIABG = Uppercase<yamaguchiabg>
-type SATOAYAKA = Uppercase<satoayaka>
-type SATOAYAKABG = Uppercase<satoayakabg>
-type MAGATAMAGNFR = Uppercase<magatamagnfr>
-type MAGATAMAVTFR = Uppercase<magatamavtfr>
-type MAGATAMATQTH = Uppercase<magatamatqth>
-type MAGATAMABZ = Uppercase<magatamabz>
-type MAGATAMARDSV = Uppercase<magatamardsv>
-type ICHARLOTTEBG = Uppercase<icharlottebg>
-type XACSEVEN = Uppercase<xacseven>
-type YOGIBOGOCPTW = Uppercase<yogibogocptw>
-type MAGATAMAGNON = Uppercase<magatamagnon>
-type ERC20_CMS = Uppercase<erc20_cms>
-type MOSAIC_CMS = Uppercase<mosaic_cms>
-
-export type {
-  btc,
-  jpy,
-  BTC,
-  JPY,
-  plt,
-  etc,
-  fct,
-  mona,
-  eth,
-  lsk,
-  xrp,
-  xem,
-  ltc,
-  bch,
-  xlm,
-  qtum,
-  bat,
-  iost,
-  enj,
-  omg,
-  bcc,
-  BCC,
-  ont,
-  ONT,
-  pepecash,
-  hinanomai,
-  shimarena,
-  magatamardon,
-  rumirumi,
-  shirahoshibg,
-  magatamablfv,
-  magatamardfr,
-  magatamagn,
-  mizuki,
-  leenabg,
-  risavix,
-  shirahoshi,
-  magatamablsx,
-  magatamagnth,
-  yogibogocpfr,
-  ncxc,
-  magatamardfv,
-  magatamatq,
-  sanomayavix,
-  ruru,
-  magatamagnfv,
-  hyou,
-  bitcrystals,
-  magatamawtfv,
-  nemcard,
-  magatamawtsx,
-  magatamagnsv,
-  yogibogocpfv,
-  zaif,
-  magatamaylon,
-  magatamablsv,
-  magatamavtsv,
-  itsuki,
-  djasanyanvix,
-  tsukasa,
-  chikarinbg,
-  kaoribg,
-  magatamawtfr,
-  bitgirlsi,
-  magatamayl,
-  cicc,
-  sirahosivix,
-  xacone,
-  magatamawt,
-  rumirumibg,
-  xacsix,
-  magatamavton,
-  magatamagnsx,
-  magatamavttw,
-  shimarenabg,
-  kinokousaka,
-  chikarinvix,
-  magatamavtth,
-  sjcx,
-  xactwo,
-  magatamabl,
-  bitgirlsii,
-  magatamatqsv,
-  kinobg,
-  mizukivix,
-  magatamabltw,
-  djasanyan,
-  yogibogocpth,
-  magatamayltw,
-  magatamard,
-  xacnine,
-  leena,
-  magatamaylfr,
-  magatamablon,
-  mamichanbg,
-  rurubg,
-  magatamardsx,
-  magatamavtsx,
-  sanomayabg,
-  itsukibg,
-  tsukasavix,
-  magatamaylsx,
-  mizukibg,
-  yogibogocpon,
-  magatamagntw,
-  mamichannel,
-  pachi,
-  xcp,
-  xacfour,
-  djasanyanbg,
-  hinanomaibg,
-  torekabuopt,
-  magatamardtw,
-  magatamaylsv,
-  yogibogocpsx,
-  magatamaylfv,
-  magatamawttw,
-  magatamatqfv,
-  magatamawtsv,
-  fscc,
-  xacfive,
-  yamaguchia,
-  magatamatqsx,
-  magatamatqtw,
-  xym,
-  tsukasabg,
-  magatamardth,
-  magatamavtfv,
-  jpyz,
-  magatamatqon,
-  magatamawton,
-  magatamaylth,
-  magatamavt,
-  xacthree,
-  magatamamijn,
-  magatamawtth,
-  sanomaya,
-  kaori,
-  magatamablfr,
-  magatamablth,
-  magatamatqfr,
-  xaceight,
-  icharlotte,
-  chikarin,
-  yamaguchiabg,
-  satoayaka,
-  satoayakabg,
-  magatamagnfr,
-  magatamavtfr,
-  magatamatqth,
-  magatamabz,
-  magatamardsv,
-  icharlottebg,
-  xacseven,
-  yogibogocptw,
-  magatamagnon,
-  erc20_cms,
-  mosaic_cms,
-  PEPECASH,
-  HINANOMAI,
-  SHIMARENA,
-  MAGATAMARDON,
-  RUMIRUMI,
-  SHIRAHOSHIBG,
-  MAGATAMABLFV,
-  MAGATAMARDFR,
-  MAGATAMAGN,
-  MIZUKI,
-  LEENABG,
-  RISAVIX,
-  SHIRAHOSHI,
-  MAGATAMABLSX,
-  MAGATAMAGNTH,
-  YOGIBOGOCPFR,
-  NCXC,
-  MAGATAMARDFV,
-  MAGATAMATQ,
-  SANOMAYAVIX,
-  RURU,
-  MAGATAMAGNFV,
-  HYOU,
-  BITCRYSTALS,
-  MAGATAMAWTFV,
-  NEMCARD,
-  MAGATAMAWTSX,
-  MAGATAMAGNSV,
-  YOGIBOGOCPFV,
-  ZAIF,
-  MAGATAMAYLON,
-  MAGATAMABLSV,
-  MAGATAMAVTSV,
-  ITSUKI,
-  DJASANYANVIX,
-  TSUKASA,
-  CHIKARINBG,
-  KAORIBG,
-  MAGATAMAWTFR,
-  BITGIRLSI,
-  MAGATAMAYL,
-  CICC,
-  SIRAHOSIVIX,
-  XACONE,
-  MAGATAMAWT,
-  RUMIRUMIBG,
-  XACSIX,
-  MAGATAMAVTON,
-  MAGATAMAGNSX,
-  MAGATAMAVTTW,
-  SHIMARENABG,
-  KINOKOUSAKA,
-  CHIKARINVIX,
-  MAGATAMAVTTH,
-  SJCX,
-  XACTWO,
-  MAGATAMABL,
-  BITGIRLSII,
-  MAGATAMATQSV,
-  KINOBG,
-  MIZUKIVIX,
-  MAGATAMABLTW,
-  DJASANYAN,
-  YOGIBOGOCPTH,
-  MAGATAMAYLTW,
-  MAGATAMARD,
-  XACNINE,
-  LEENA,
-  MAGATAMAYLFR,
-  MAGATAMABLON,
-  MAMICHANBG,
-  RURUBG,
-  MAGATAMARDSX,
-  MAGATAMAVTSX,
-  SANOMAYABG,
-  ITSUKIBG,
-  TSUKASAVIX,
-  MAGATAMAYLSX,
-  MIZUKIBG,
-  YOGIBOGOCPON,
-  MAGATAMAGNTW,
-  MAMICHANNEL,
-  PACHI,
-  XCP,
-  XACFOUR,
-  DJASANYANBG,
-  HINANOMAIBG,
-  TOREKABUOPT,
-  MAGATAMARDTW,
-  MAGATAMAYLSV,
-  YOGIBOGOCPSX,
-  MAGATAMAYLFV,
-  MAGATAMAWTTW,
-  MAGATAMATQFV,
-  MAGATAMAWTSV,
-  FSCC,
-  XACFIVE,
-  YAMAGUCHIA,
-  MAGATAMATQSX,
-  MAGATAMATQTW,
-  XYM,
-  TSUKASABG,
-  MAGATAMARDTH,
-  MAGATAMAVTFV,
-  JPYZ,
-  MAGATAMATQON,
-  MAGATAMAWTON,
-  MAGATAMAYLTH,
-  MAGATAMAVT,
-  XACTHREE,
-  MAGATAMAMIJN,
-  MAGATAMAWTTH,
-  SANOMAYA,
-  KAORI,
-  MAGATAMABLFR,
-  MAGATAMABLTH,
-  MAGATAMATQFR,
-  XACEIGHT,
-  ICHARLOTTE,
-  CHIKARIN,
-  YAMAGUCHIABG,
-  SATOAYAKA,
-  SATOAYAKABG,
-  MAGATAMAGNFR,
-  MAGATAMAVTFR,
-  MAGATAMATQTH,
-  MAGATAMABZ,
-  MAGATAMARDSV,
-  ICHARLOTTEBG,
-  XACSEVEN,
-  YOGIBOGOCPTW,
-  MAGATAMAGNON,
-  ERC20_CMS,
-  MOSAIC_CMS,
-  PLT,
-  ETC,
-  FCT,
-  MONA,
-  ETH,
-  LSK,
-  XRP,
-  XEM,
-  LTC,
-  BCH,
-  XLM,
-  QTUM,
-  BAT,
-  IOST,
-  ENJ,
-  OMG,
-  allSymbols,
-  AllSymbols,
-  keyCurrency
-}
+export type BTC = Uppercase<btc>
+export type JPY = Uppercase<jpy>
+export type PLT = Uppercase<plt>
+export type ETC = Uppercase<etc>
+export type FCT = Uppercase<fct>
+export type MONA = Uppercase<mona>
+export type ETH = Uppercase<eth>
+export type LSK = Uppercase<lsk>
+export type XRP = Uppercase<xrp>
+export type XEM = Uppercase<xem>
+export type LTC = Uppercase<ltc>
+export type BCH = Uppercase<bch>
+export type XLM = Uppercase<xlm>
+export type QTUM = Uppercase<qtum>
+export type BAT = Uppercase<bat>
+export type IOST = Uppercase<iost>
+export type ENJ = Uppercase<enj>
+export type OMG = Uppercase<omg>
+export type BCC = Uppercase<bcc>
+export type ONT = Uppercase<ont>
+export type TRX = Uppercase<trx>
+export type HT = Uppercase<ht>
+export type PEPECASH = Uppercase<pepecash>
+export type HINANOMAI = Uppercase<hinanomai>
+export type SHIMARENA = Uppercase<shimarena>
+export type MAGATAMARDON = Uppercase<magatamardon>
+export type RUMIRUMI = Uppercase<rumirumi>
+export type SHIRAHOSHIBG = Uppercase<shirahoshibg>
+export type MAGATAMABLFV = Uppercase<magatamablfv>
+export type MAGATAMARDFR = Uppercase<magatamardfr>
+export type MAGATAMAGN = Uppercase<magatamagn>
+export type MIZUKI = Uppercase<mizuki>
+export type LEENABG = Uppercase<leenabg>
+export type RISAVIX = Uppercase<risavix>
+export type SHIRAHOSHI = Uppercase<shirahoshi>
+export type MAGATAMABLSX = Uppercase<magatamablsx>
+export type MAGATAMAGNTH = Uppercase<magatamagnth>
+export type YOGIBOGOCPFR = Uppercase<yogibogocpfr>
+export type NCXC = Uppercase<ncxc>
+export type MAGATAMARDFV = Uppercase<magatamardfv>
+export type MAGATAMATQ = Uppercase<magatamatq>
+export type SANOMAYAVIX = Uppercase<sanomayavix>
+export type RURU = Uppercase<ruru>
+export type MAGATAMAGNFV = Uppercase<magatamagnfv>
+export type HYOU = Uppercase<hyou>
+export type BITCRYSTALS = Uppercase<bitcrystals>
+export type MAGATAMAWTFV = Uppercase<magatamawtfv>
+export type NEMCARD = Uppercase<nemcard>
+export type MAGATAMAWTSX = Uppercase<magatamawtsx>
+export type MAGATAMAGNSV = Uppercase<magatamagnsv>
+export type YOGIBOGOCPFV = Uppercase<yogibogocpfv>
+export type ZAIF = Uppercase<zaif>
+export type MAGATAMAYLON = Uppercase<magatamaylon>
+export type MAGATAMABLSV = Uppercase<magatamablsv>
+export type MAGATAMAVTSV = Uppercase<magatamavtsv>
+export type ITSUKI = Uppercase<itsuki>
+export type DJASANYANVIX = Uppercase<djasanyanvix>
+export type TSUKASA = Uppercase<tsukasa>
+export type CHIKARINBG = Uppercase<chikarinbg>
+export type KAORIBG = Uppercase<kaoribg>
+export type MAGATAMAWTFR = Uppercase<magatamawtfr>
+export type BITGIRLSI = Uppercase<bitgirlsi>
+export type MAGATAMAYL = Uppercase<magatamayl>
+export type CICC = Uppercase<cicc>
+export type SIRAHOSIVIX = Uppercase<sirahosivix>
+export type XACONE = Uppercase<xacone>
+export type MAGATAMAWT = Uppercase<magatamawt>
+export type RUMIRUMIBG = Uppercase<rumirumibg>
+export type XACSIX = Uppercase<xacsix>
+export type MAGATAMAVTON = Uppercase<magatamavton>
+export type MAGATAMAGNSX = Uppercase<magatamagnsx>
+export type MAGATAMAVTTW = Uppercase<magatamavttw>
+export type SHIMARENABG = Uppercase<shimarenabg>
+export type KINOKOUSAKA = Uppercase<kinokousaka>
+export type CHIKARINVIX = Uppercase<chikarinvix>
+export type MAGATAMAVTTH = Uppercase<magatamavtth>
+export type SJCX = Uppercase<sjcx>
+export type XACTWO = Uppercase<xactwo>
+export type MAGATAMABL = Uppercase<magatamabl>
+export type BITGIRLSII = Uppercase<bitgirlsii>
+export type MAGATAMATQSV = Uppercase<magatamatqsv>
+export type KINOBG = Uppercase<kinobg>
+export type MIZUKIVIX = Uppercase<mizukivix>
+export type MAGATAMABLTW = Uppercase<magatamabltw>
+export type DJASANYAN = Uppercase<djasanyan>
+export type YOGIBOGOCPTH = Uppercase<yogibogocpth>
+export type MAGATAMAYLTW = Uppercase<magatamayltw>
+export type MAGATAMARD = Uppercase<magatamard>
+export type XACNINE = Uppercase<xacnine>
+export type LEENA = Uppercase<leena>
+export type MAGATAMAYLFR = Uppercase<magatamaylfr>
+export type MAGATAMABLON = Uppercase<magatamablon>
+export type MAMICHANBG = Uppercase<mamichanbg>
+export type RURUBG = Uppercase<rurubg>
+export type MAGATAMARDSX = Uppercase<magatamardsx>
+export type MAGATAMAVTSX = Uppercase<magatamavtsx>
+export type SANOMAYABG = Uppercase<sanomayabg>
+export type ITSUKIBG = Uppercase<itsukibg>
+export type TSUKASAVIX = Uppercase<tsukasavix>
+export type MAGATAMAYLSX = Uppercase<magatamaylsx>
+export type MIZUKIBG = Uppercase<mizukibg>
+export type YOGIBOGOCPON = Uppercase<yogibogocpon>
+export type MAGATAMAGNTW = Uppercase<magatamagntw>
+export type MAMICHANNEL = Uppercase<mamichannel>
+export type PACHI = Uppercase<pachi>
+export type XCP = Uppercase<xcp>
+export type XACFOUR = Uppercase<xacfour>
+export type DJASANYANBG = Uppercase<djasanyanbg>
+export type HINANOMAIBG = Uppercase<hinanomaibg>
+export type TOREKABUOPT = Uppercase<torekabuopt>
+export type MAGATAMARDTW = Uppercase<magatamardtw>
+export type MAGATAMAYLSV = Uppercase<magatamaylsv>
+export type YOGIBOGOCPSX = Uppercase<yogibogocpsx>
+export type MAGATAMAYLFV = Uppercase<magatamaylfv>
+export type MAGATAMAWTTW = Uppercase<magatamawttw>
+export type MAGATAMATQFV = Uppercase<magatamatqfv>
+export type MAGATAMAWTSV = Uppercase<magatamawtsv>
+export type FSCC = Uppercase<fscc>
+export type XACFIVE = Uppercase<xacfive>
+export type YAMAGUCHIA = Uppercase<yamaguchia>
+export type MAGATAMATQSX = Uppercase<magatamatqsx>
+export type MAGATAMATQTW = Uppercase<magatamatqtw>
+export type XYM = Uppercase<xym>
+export type TSUKASABG = Uppercase<tsukasabg>
+export type MAGATAMARDTH = Uppercase<magatamardth>
+export type MAGATAMAVTFV = Uppercase<magatamavtfv>
+export type JPYZ = Uppercase<jpyz>
+export type MAGATAMATQON = Uppercase<magatamatqon>
+export type MAGATAMAWTON = Uppercase<magatamawton>
+export type MAGATAMAYLTH = Uppercase<magatamaylth>
+export type MAGATAMAVT = Uppercase<magatamavt>
+export type XACTHREE = Uppercase<xacthree>
+export type MAGATAMAMIJN = Uppercase<magatamamijn>
+export type MAGATAMAWTTH = Uppercase<magatamawtth>
+export type SANOMAYA = Uppercase<sanomaya>
+export type KAORI = Uppercase<kaori>
+export type MAGATAMABLFR = Uppercase<magatamablfr>
+export type MAGATAMABLTH = Uppercase<magatamablth>
+export type MAGATAMATQFR = Uppercase<magatamatqfr>
+export type XACEIGHT = Uppercase<xaceight>
+export type ICHARLOTTE = Uppercase<icharlotte>
+export type CHIKARIN = Uppercase<chikarin>
+export type YAMAGUCHIABG = Uppercase<yamaguchiabg>
+export type SATOAYAKA = Uppercase<satoayaka>
+export type SATOAYAKABG = Uppercase<satoayakabg>
+export type MAGATAMAGNFR = Uppercase<magatamagnfr>
+export type MAGATAMAVTFR = Uppercase<magatamavtfr>
+export type MAGATAMATQTH = Uppercase<magatamatqth>
+export type MAGATAMABZ = Uppercase<magatamabz>
+export type MAGATAMARDSV = Uppercase<magatamardsv>
+export type ICHARLOTTEBG = Uppercase<icharlottebg>
+export type XACSEVEN = Uppercase<xacseven>
+export type YOGIBOGOCPTW = Uppercase<yogibogocptw>
+export type MAGATAMAGNON = Uppercase<magatamagnon>
+export type ERC20_CMS = Uppercase<erc20_cms>
+export type MOSAIC_CMS = Uppercase<mosaic_cms>
