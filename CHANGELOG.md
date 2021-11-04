@@ -1,3 +1,9 @@
+# [v1.0.0-beta.9](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2021-11-04)
+
+## ✨ New Features
+
+- [`bc1be19`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/bc1be19) Add utility types for define currency pair
+
 # [v1.0.0-beta.8](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2021-11-04)
 
 ## ✨ New Features
