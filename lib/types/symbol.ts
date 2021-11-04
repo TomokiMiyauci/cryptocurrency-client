@@ -18,6 +18,7 @@ import {
   enj,
   omg,
   bcc,
+  ont,
   pepecash,
   hinanomai,
   shimarena,
@@ -177,6 +178,7 @@ type iost = typeof iost
 type enj = typeof enj
 type omg = typeof omg
 type bcc = typeof bcc
+type ont = typeof ont
 type pepecash = typeof pepecash
 type hinanomai = typeof hinanomai
 type shimarena = typeof shimarena
@@ -333,6 +335,7 @@ type IOST = Uppercase<iost>
 type ENJ = Uppercase<enj>
 type OMG = Uppercase<omg>
 type BCC = Uppercase<bcc>
+type ONT = Uppercase<ont>
 type PEPECASH = Uppercase<pepecash>
 type HINANOMAI = Uppercase<hinanomai>
 type SHIMARENA = Uppercase<shimarena>
@@ -491,6 +494,8 @@ export type {
   omg,
   bcc,
   BCC,
+  ont,
+  ONT,
   pepecash,
   hinanomai,
   shimarena,

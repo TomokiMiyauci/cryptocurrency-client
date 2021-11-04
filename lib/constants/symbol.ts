@@ -18,6 +18,7 @@ export const plt = 'plt'
 export const enj = 'enj'
 export const omg = 'omg'
 export const bcc = 'bcc'
+export const ont = 'ont'
 export const pepecash = 'pepecash'
 export const hinanomai = 'hinanomai'
 export const shimarena = 'shimarena'
@@ -173,6 +174,7 @@ export const ALL = [
   enj,
   omg,
   bcc,
+  ont,
   pepecash,
   hinanomai,
   shimarena,
