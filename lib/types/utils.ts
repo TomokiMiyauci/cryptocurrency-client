@@ -20,4 +20,11 @@ type Pair<
   _ = Q
 > = B extends _ ? Pair<Exclude<Q, B>, B, Separator> : Join<Q, B, Separator>
 
-export type { Pair }
+type DropChar<
+  T extends string,
+  U extends string
+> = T extends `${infer prefix}${U}${infer suffix}`
+  ? DropChar<`${prefix}${suffix}`, U>
+  : T
+
+export type { Pair, DropChar }
