@@ -1,3 +1,9 @@
+# [v1.0.0-beta.10](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-11-05)
+
+## ✨ New Features
+
+- [`8270a49`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/8270a49) Add new symbol
+
 # [v1.0.0-beta.9](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2021-11-04)
 
 ## ✨ New Features
