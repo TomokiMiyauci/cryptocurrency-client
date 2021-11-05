@@ -1,3 +1,9 @@
+# [v1.0.0-beta.11](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-11-05)
+
+## ✨ New Features
+
+- [`c5da37b`](https://github.com/TomokiMiyauci/cryptocurrency-types/commit/c5da37b) Add new symbols and lint symbol
+
 # [v1.0.0-beta.10](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-11-05)
 
 ## ✨ New Features
