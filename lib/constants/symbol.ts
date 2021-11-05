@@ -20,6 +20,7 @@ export const omg = 'omg'
 export const bcc = 'bcc'
 export const ont = 'ont'
 export const trx = 'trx'
+export const bcha = 'bcha'
 
 export const ht = 'ht'
 export const pepecash = 'pepecash'

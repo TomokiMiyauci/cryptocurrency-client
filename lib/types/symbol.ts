@@ -21,6 +21,7 @@ import {
   bcc,
   ont,
   trx,
+  bcha,
   ht,
   pepecash,
   hinanomai,
@@ -184,6 +185,8 @@ export type omg = typeof omg
 export type bcc = typeof bcc
 export type ont = typeof ont
 export type trx = typeof trx
+export type bcha = typeof bcha
+
 export type ht = typeof ht
 export type pepecash = typeof pepecash
 export type hinanomai = typeof hinanomai
@@ -341,6 +344,8 @@ export type OMG = Uppercase<omg>
 export type BCC = Uppercase<bcc>
 export type ONT = Uppercase<ont>
 export type TRX = Uppercase<trx>
+export type BCHA = Uppercase<bcha>
+
 export type HT = Uppercase<ht>
 export type PEPECASH = Uppercase<pepecash>
 export type HINANOMAI = Uppercase<hinanomai>
