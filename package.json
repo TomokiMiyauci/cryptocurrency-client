@@ -8,6 +8,7 @@
     "prepare": "husky install",
     "lint:eslint": "eslint --ignore-path .gitignore .",
     "lint:tsc": "tsc --noEmit",
+    "lint:symbol": "node -r @swc/register -r tsconfig-paths/register scripts/lint-symbol.ts",
     "lint": "run-p lint:*",
     "prebuild": "node -r @swc/register -r tsconfig-paths/register scripts/index.ts",
     "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",

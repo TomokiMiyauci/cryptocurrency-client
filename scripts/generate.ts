@@ -1,6 +1,7 @@
 import { renderFile, configure } from 'eta'
 
 import * as SYMBOLS from '@/constants/symbol'
+import { isFirstNumber } from '@/utils/regex'
 
 import { writeFile } from 'fs/promises'
 import { resolve } from 'path'
@@ -10,8 +11,12 @@ configure({
 })
 
 const main = async () => {
-  const symbols = Object.values(SYMBOLS)
-    .map((x) => x.replaceAll('.', '_'))
+  const symbols = Object.entries(SYMBOLS)
+    .map(([key, value]) => {
+      const cleaned = value.replaceAll('.', '_')
+
+      return isFirstNumber.test(cleaned) ? key : cleaned
+    })
     .sort()
 
   const content = await renderFile('symbol', {
