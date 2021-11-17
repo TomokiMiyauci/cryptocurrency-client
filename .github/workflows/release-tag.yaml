@@ -55,7 +55,7 @@ jobs:
           version: 6.0.2
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --prefer-offline]
+              args: [--frozen-lockfile, --prefer-offline, --ignore-scripts]
 
       - name: Release
         run: pnpm release
