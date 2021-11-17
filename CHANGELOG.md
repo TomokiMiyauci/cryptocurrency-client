@@ -1,3 +1,10 @@
+# [1.0.0-beta.12](https://github.com/coinset/cc-types/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-11-17)
+
+
+### Features
+
+* switch code base to Deno ([0ccc352](https://github.com/coinset/cc-types/commit/0ccc3522da16c82360de61c10a288f4f35c8cf8e))
+
 # [v1.0.0-beta.11](https://github.com/TomokiMiyauci/cryptocurrency-types/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-11-05)
 
 ## ✨ New Features
