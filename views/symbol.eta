@@ -1,17 +1,17 @@
-import { ALL_SYMBOLS } from '@/constants'
+import { ALL_SYMBOLS } from "../constants/mod.ts";
+
 import {
   <%= it.symbols.join(',\n  ') %>
 
-} from '@/constants/symbol'
+} from '../constants/symbol.ts'
 
 export type allSymbol = typeof ALL_SYMBOLS[number]
 export type AllSymbol = Uppercase<allSymbol>
 
 <% it.symbols.forEach((symbol) => { %>
-export type <%= symbol %> = typeof <%= symbol %>
-
+export type <%= symbol %> = typeof <%= symbol %>;
 <% }) %>
 
 <% it.symbols.forEach((symbol) => { %>
-export type <%= symbol.toUpperCase() %> = Uppercase<<%= symbol %>>
+export type <%= symbol.toUpperCase() %> = Uppercase<<%= symbol %>>;
 <% }) %>
