@@ -1,0 +1,17 @@
+import { ALL_TOKENS } from "../constants/mod.ts";
+
+import {
+  <%= it.tokens.join(',\n  ') %>
+
+} from '../constants/token.ts';
+
+export type allToken = typeof ALL_TOKENS[number];
+export type AllToken = Uppercase<allToken>;
+
+<% it.tokens.forEach((token) => { %>
+export type <%= token %> = typeof <%= token %>;
+<% }) %>
+
+<% it.tokens.forEach((token) => { %>
+export type <%= token.toUpperCase() %> = Uppercase<<%= token %>>;
+<% }) %>

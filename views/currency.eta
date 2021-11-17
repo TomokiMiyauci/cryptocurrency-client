@@ -1,0 +1,17 @@
+import { ALL_CURRENCIES } from "../constants/mod.ts";
+
+import {
+  <%= it.currencies.join(',\n  ') %>
+
+} from '../constants/currency.ts';
+
+export type allCurrency = typeof ALL_CURRENCIES[number];
+export type AllCurrency = Uppercase<allCurrency>;
+
+<% it.currencies.forEach((currency) => { %>
+export type <%= currency %> = typeof <%= currency %>;
+<% }) %>
+
+<% it.currencies.forEach((currency) => { %>
+export type <%= currency.toUpperCase() %> = Uppercase<<%= currency %>>;
+<% }) %>

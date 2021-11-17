@@ -1,6 +1,8 @@
 import { configure, renderFile } from "https://deno.land/x/eta/mod.ts";
 
 import * as SYMBOLS from "../constants/symbol.ts";
+import * as CURRENCIES from "../constants/currency.ts";
+import * as TOKENS from "../constants/token.ts";
 import { isFirstNumber } from "../_utils/regex.ts";
 
 import {
@@ -23,14 +25,35 @@ if (import.meta.main) {
     })
     .sort();
 
+  const currencies = Object.values(CURRENCIES).sort();
+  const tokens = Object.values(TOKENS).sort();
+
   const content = await renderFile("symbol", {
     symbols,
   });
 
-  if (content) {
+  const currencyContent = await renderFile("currency", {
+    currencies,
+  });
+
+  const tokenContent = await renderFile("token", {
+    tokens,
+  });
+
+  if (content && currencyContent && tokenContent) {
     Deno.writeTextFileSync(
       resolve(baseDir, "types", "symbol.ts"),
       content,
+    );
+
+    Deno.writeTextFileSync(
+      resolve(baseDir, "types", "currency.ts"),
+      currencyContent,
+    );
+
+    Deno.writeTextFileSync(
+      resolve(baseDir, "types", "token.ts"),
+      tokenContent,
     );
   }
 }

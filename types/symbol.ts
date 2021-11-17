@@ -74,7 +74,6 @@ import {
   eth3l,
   eth3s,
   etn,
-  eur,
   ewt,
   fct,
   fdx,
@@ -117,7 +116,6 @@ import {
   itsuki,
   itsukibg,
   ixt,
-  jpy,
   jpyz,
   kaori,
   kaoribg,
@@ -295,7 +293,6 @@ import {
   ubt,
   ukg,
   uni,
-  usd,
   usdc,
   usds,
   usdt,
@@ -424,7 +421,6 @@ export type eth = typeof eth;
 export type eth3l = typeof eth3l;
 export type eth3s = typeof eth3s;
 export type etn = typeof etn;
-export type eur = typeof eur;
 export type ewt = typeof ewt;
 export type fct = typeof fct;
 export type fdx = typeof fdx;
@@ -467,7 +463,6 @@ export type ipsx = typeof ipsx;
 export type itsuki = typeof itsuki;
 export type itsukibg = typeof itsukibg;
 export type ixt = typeof ixt;
-export type jpy = typeof jpy;
 export type jpyz = typeof jpyz;
 export type kaori = typeof kaori;
 export type kaoribg = typeof kaoribg;
@@ -645,7 +640,6 @@ export type tsukasavix = typeof tsukasavix;
 export type ubt = typeof ubt;
 export type ukg = typeof ukg;
 export type uni = typeof uni;
-export type usd = typeof usd;
 export type usdc = typeof usdc;
 export type usds = typeof usds;
 export type usdt = typeof usdt;
@@ -770,7 +764,6 @@ export type ETH = Uppercase<eth>;
 export type ETH3L = Uppercase<eth3l>;
 export type ETH3S = Uppercase<eth3s>;
 export type ETN = Uppercase<etn>;
-export type EUR = Uppercase<eur>;
 export type EWT = Uppercase<ewt>;
 export type FCT = Uppercase<fct>;
 export type FDX = Uppercase<fdx>;
@@ -813,7 +806,6 @@ export type IPSX = Uppercase<ipsx>;
 export type ITSUKI = Uppercase<itsuki>;
 export type ITSUKIBG = Uppercase<itsukibg>;
 export type IXT = Uppercase<ixt>;
-export type JPY = Uppercase<jpy>;
 export type JPYZ = Uppercase<jpyz>;
 export type KAORI = Uppercase<kaori>;
 export type KAORIBG = Uppercase<kaoribg>;
@@ -991,7 +983,6 @@ export type TSUKASAVIX = Uppercase<tsukasavix>;
 export type UBT = Uppercase<ubt>;
 export type UKG = Uppercase<ukg>;
 export type UNI = Uppercase<uni>;
-export type USD = Uppercase<usd>;
 export type USDC = Uppercase<usdc>;
 export type USDS = Uppercase<usds>;
 export type USDT = Uppercase<usdt>;

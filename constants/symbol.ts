@@ -1,4 +1,3 @@
-export const jpy = "jpy";
 export const btc = "btc";
 export const etc = "etc";
 export const fct = "fct";
@@ -20,8 +19,6 @@ export const bcc = "bcc";
 export const ont = "ont";
 export const trx = "trx";
 export const bcha = "bcha";
-export const eur = "eur";
-export const usd = "usd";
 export const usdt = "usdt";
 export const usdc = "usdc";
 export const sgd = "sgd";
