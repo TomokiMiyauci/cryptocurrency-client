@@ -1,3 +1,10 @@
+# [1.0.0-beta.13](https://github.com/coinset/cc-types/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2021-11-17)
+
+
+### Features
+
+* add new currency and tokens ([1dfdd23](https://github.com/coinset/cc-types/commit/1dfdd23864c0e784d3656c23ebf4a3dcb199f1f3))
+
 # [1.0.0-beta.12](https://github.com/coinset/cc-types/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-11-17)
 
 
