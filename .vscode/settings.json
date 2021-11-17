@@ -13,5 +13,6 @@
   "deno.internalDebug": true,
   "deno.lint": true,
   "deno.suggest.completeFunctionCalls": true,
-  "deno.unstable": true
+  "deno.unstable": true,
+  "deno.config": "deno.json"
 }

@@ -23,7 +23,7 @@ jobs:
           deno-version: ${{ matrix.deno }}
 
       - name: Lint
-        run: deno lint && deno run scripts/lint_symbol.ts
+        run: deno lint --config deno.json && deno run scripts/lint_symbol.ts
 
   release:
     needs: lint
